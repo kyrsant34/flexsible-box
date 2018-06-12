@@ -1,0 +1,41 @@
+[
+{
+    "model": "account.department",
+    "pk": 1,
+    "fields": {
+        "title": "ROOT COMPANY",
+        "parent": null,
+        "lft": 1,
+        "rght": 4,
+        "tree_id": 1,
+        "level": 0
+    }
+},
+{
+    "model": "account.department",
+    "pk": 2,
+    "fields": {
+        "title": "MEGARUSS",
+        "parent": 1,
+        "lft": 2,
+        "rght": 3,
+        "tree_id": 1,
+        "level": 1
+    }
+},
+{
+    "model": "account.user",
+    "fields": {
+        "last_login": "2017-07-26T11:34:35.489Z",
+        "created": "2017-07-01T00:00:00Z",
+        "is_superuser": true,
+        "email": "rk@cmios.ru",
+        "password": "pbkdf2_sha256$36000$FlH7xPLTOAmS$75p9E8vnK59SEUyuT0NOwwOZzUmvfM45bd/NOLRTxWU=",
+        "is_staff": true,
+        "is_active": true,
+        "department": 1,
+        "person": null
+    }
+}
+]
+

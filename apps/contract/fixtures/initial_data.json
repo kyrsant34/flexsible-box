@@ -1,0 +1,241 @@
+[
+{
+    "model": "contract.calculationtype",
+    "pk": "CALC_TYPE_1",
+    "fields": {
+        "title": "Calculation Type 1",
+        "department": 2,
+        "insurance_type": "OSAGO",
+        "payment_types": []
+    }
+},
+{
+    "model": "contract.calculationtype",
+    "pk": "demo",
+    "fields": {
+        "title": "\u0414\u0435\u043c\u043e-\u0440\u0430\u0441\u0447\u0451\u0442",
+        "department": 2,
+        "insurance_type": "OSAGO",
+        "payment_types": []
+    }
+},
+{
+    "model": "contract.calculationparameter",
+    "pk": "car_cost",
+    "fields": {
+        "title": "\u0421\u0442\u043e\u0438\u043c\u043e\u0441\u0442\u044c \u0430\u0432\u0442\u043e",
+        "param_type": "string",
+        "is_required": true,
+        "is_active": true,
+        "is_many": false,
+        "calculation_types": [
+            "demo"
+        ]
+    }
+},
+{
+    "model": "contract.calculationparameter",
+    "pk": "car_mark",
+    "fields": {
+        "title": "\u041c\u0430\u0440\u043a\u0430 \u0430\u0432\u0442\u043e",
+        "param_type": "handbooks.CarMark",
+        "is_required": true,
+        "is_active": true,
+        "is_many": false,
+        "calculation_types": [
+            "demo"
+        ]
+    }
+},
+{
+    "model": "contract.calculationparameter",
+    "pk": "car_model",
+    "fields": {
+        "title": "\u041c\u043e\u0434\u0435\u043b\u044c \u0430\u0432\u0442\u043e",
+        "param_type": "handbooks.CarModel",
+        "is_required": false,
+        "is_active": true,
+        "is_many": false,
+        "calculation_types": [
+            "demo"
+        ]
+    }
+},
+{
+    "model": "contract.calculationparameter",
+    "pk": "created_by_user",
+    "fields": {
+        "title": "\u0421\u043e\u0437\u0434\u0430\u0442\u0435\u043b\u044c \u0434\u043b\u044f megaruss",
+        "param_type": "int",
+        "is_required": true,
+        "is_active": true,
+        "is_many": false,
+        "calculation_types": [
+            "demo"
+        ]
+    }
+},
+{
+    "model": "contract.calculationparameter",
+    "pk": "insurance_program",
+    "fields": {
+        "title": "\u0421\u0442\u0440\u0430\u0445\u043e\u0432\u0430\u044f \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0430",
+        "param_type": "int",
+        "is_required": false,
+        "is_active": true,
+        "is_many": false,
+        "calculation_types": [
+            "demo"
+        ]
+    }
+},
+{
+    "model": "contract.calculationparameter",
+    "pk": "insurance_type",
+    "fields": {
+        "title": "\u0422\u0438\u043f \u0441\u0442\u0440\u0430\u0445\u043e\u0432\u0430\u043d\u0438\u044f",
+        "param_type": "int",
+        "is_required": true,
+        "is_active": true,
+        "is_many": false,
+        "calculation_types": [
+            "demo"
+        ]
+    }
+},
+{
+    "model": "contract.calculationparameter",
+    "pk": "insurant_type",
+    "fields": {
+        "title": "\u0422\u0438\u043f \u0441\u0442\u0440\u0430\u0445\u043e\u0432\u0430\u0442\u0435\u043b\u044f",
+        "param_type": "int",
+        "is_required": true,
+        "is_active": true,
+        "is_many": false,
+        "calculation_types": [
+            "demo"
+        ]
+    }
+},
+{
+    "model": "contract.calculationparameter",
+    "pk": "insured_object",
+    "fields": {
+        "title": "\u041e\u0431\u044a\u0435\u043a\u0442 \u0441\u0442\u0440\u0430\u0445\u043e\u0432\u0430\u043d\u0438\u044f",
+        "param_type": "client.InsuredObject",
+        "is_required": true,
+        "is_active": true,
+        "is_many": false,
+        "calculation_types": [
+            "demo"
+        ]
+    }
+},
+{
+    "model": "contract.resulttype",
+    "pk": "KASKO",
+    "fields": {
+        "title": "\u041a\u0410\u0421\u041a\u041e",
+        "department": 1,
+        "insurance_type": "KASKO"
+    }
+},
+{
+    "model": "contract.resulttype",
+    "pk": "OSAGO",
+    "fields": {
+        "title": "\u041e\u0421\u0410\u0413\u041e",
+        "department": 1,
+        "insurance_type": "OSAGO"
+    }
+},
+{
+    "model": "contract.resultparameter",
+    "pk": "insurance_type",
+    "fields": {
+        "title": "\u0422\u0438\u043f \u0441\u0442\u0440\u0430\u0445\u043e\u0432\u0430\u043d\u0438\u044f",
+        "param_type": "string",
+        "is_required": false,
+        "is_active": true,
+        "is_many": false,
+        "result_types": [
+            "OSAGO"
+        ]
+    }
+},
+{
+    "model": "contract.resultparameter",
+    "pk": "program",
+    "fields": {
+        "title": "\u041f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0430",
+        "param_type": "json",
+        "is_required": true,
+        "is_active": true,
+        "is_many": false,
+        "result_types": [
+            "OSAGO"
+        ]
+    }
+},
+{
+    "model": "contract.resultparameter",
+    "pk": "variables",
+    "fields": {
+        "title": "\u041f\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0435 \u0440\u0430\u0441\u0447\u0451\u0442\u0430",
+        "param_type": "json",
+        "is_required": true,
+        "is_active": true,
+        "is_many": false,
+        "result_types": [
+            "OSAGO"
+        ]
+    }
+},
+{
+    "model": "contract.actiontype",
+    "pk": "PAYMENT",
+    "fields": {
+        "title": "\u041e\u043f\u043b\u0430\u0442\u0430",
+        "department": 2,
+        "insurance_type": "OSAGO",
+        "successfull_contract_status": "PAYED",
+        "fail_contract_status": null
+    }
+},
+{
+    "model": "contract.actiontype",
+    "pk": "REGISTRATION",
+    "fields": {
+        "title": "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044f",
+        "department": 2,
+        "insurance_type": "OSAGO",
+        "successfull_contract_status": "REG_APP",
+        "fail_contract_status": null
+    }
+},
+{
+    "model": "contract.actiontype",
+    "pk": "SAVE",
+    "fields": {
+        "title": "\u0421\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u0438\u0435",
+        "department": 2,
+        "insurance_type": "OSAGO",
+        "successfull_contract_status": "SAVED",
+        "fail_contract_status": "REG_APP"
+    }
+},
+{
+    "model": "contract.actionparameter",
+    "pk": "success",
+    "fields": {
+        "title": "\u0443\u0441\u043f\u0435\u0448\u043d\u043e",
+        "param_type": "bool",
+        "is_required": true,
+        "is_active": true,
+        "is_many": false,
+        "action_types": [
+            "SAVE"
+        ]
+    }
+}
+]

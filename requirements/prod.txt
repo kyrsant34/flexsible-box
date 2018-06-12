@@ -1,0 +1,10 @@
+django==1.11.2
+djangorestframework==3.6.3
+path.py==10.3.1
+PyYAML==3.12
+django-mptt==0.8.7
+django-filter==1.0.4
+psycopg2==2.7.1
+gunicorn==19.7.1
+git+https://github.com/defance/dadata-python#egg=dadata-client==0.1.4
+dj_database_url
